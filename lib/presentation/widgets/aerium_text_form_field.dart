@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class AeriumTextFormField extends StatelessWidget {
-  AeriumTextFormField({
-    Key? key,
+  const AeriumTextFormField({
+    super.key,
     this.title = '',
     this.titleStyle,
     this.hasTitle = true,
@@ -27,7 +27,7 @@ class AeriumTextFormField extends StatelessWidget {
     this.filled = false,
     this.maxLines = 1,
     this.controller,
-  }) : super(key: key);
+  });
 
   final TextStyle? textStyle;
   final TextStyle? hintTextStyle;
@@ -48,7 +48,7 @@ class AeriumTextFormField extends StatelessWidget {
   final Color fillColor;
   final bool filled;
   final bool hasTitle;
-  int? maxLines;
+  final int? maxLines;
   final TextEditingController? controller;
 
   @override

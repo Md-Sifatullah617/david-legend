@@ -107,27 +107,27 @@ class Data {
   static List<SocialData> socialData = [
     SocialData(
       name: StringConst.GITHUB,
-      iconData: FontAwesomeIcons.github,
+      iconData: FontAwesomeIcons.github.data,
       url: StringConst.GITHUB_URL,
     ),
     SocialData(
       name: StringConst.LINKED_IN,
-      iconData: FontAwesomeIcons.linkedin,
+      iconData: FontAwesomeIcons.linkedin.data,
       url: StringConst.LINKED_IN_URL,
     ),
     SocialData(
       name: StringConst.TWITTER,
-      iconData: FontAwesomeIcons.twitter,
+      iconData: FontAwesomeIcons.twitter.data,
       url: StringConst.TWITTER_URL,
     ),
     SocialData(
       name: StringConst.INSTAGRAM,
-      iconData: FontAwesomeIcons.instagram,
+      iconData: FontAwesomeIcons.instagram.data,
       url: StringConst.INSTAGRAM_URL,
     ),
     SocialData(
       name: StringConst.TELEGRAM,
-      iconData: FontAwesomeIcons.telegram,
+      iconData: FontAwesomeIcons.telegram.data,
       url: StringConst.TELEGRAM_URL,
     ),
   ];
@@ -171,17 +171,17 @@ class Data {
   static List<SocialData> socialData1 = [
     SocialData(
       name: StringConst.GITHUB,
-      iconData: FontAwesomeIcons.github,
+      iconData: FontAwesomeIcons.github.data,
       url: StringConst.GITHUB_URL,
     ),
     SocialData(
       name: StringConst.LINKED_IN,
-      iconData: FontAwesomeIcons.linkedin,
+      iconData: FontAwesomeIcons.linkedin.data,
       url: StringConst.LINKED_IN_URL,
     ),
     SocialData(
       name: StringConst.TWITTER,
-      iconData: FontAwesomeIcons.twitter,
+      iconData: FontAwesomeIcons.twitter.data,
       url: StringConst.TWITTER_URL,
     ),
   ];
@@ -189,22 +189,22 @@ class Data {
   static List<SocialData> socialData2 = [
     SocialData(
       name: StringConst.LINKED_IN,
-      iconData: FontAwesomeIcons.linkedin,
+      iconData: FontAwesomeIcons.linkedin.data,
       url: StringConst.LINKED_IN_URL,
     ),
     SocialData(
       name: StringConst.TWITTER,
-      iconData: FontAwesomeIcons.twitter,
+      iconData: FontAwesomeIcons.twitter.data,
       url: StringConst.TWITTER_URL,
     ),
     SocialData(
       name: StringConst.INSTAGRAM,
-      iconData: FontAwesomeIcons.instagram,
+      iconData: FontAwesomeIcons.instagram.data,
       url: StringConst.INSTAGRAM_URL,
     ),
     SocialData(
       name: StringConst.TELEGRAM,
-      iconData: FontAwesomeIcons.telegram,
+      iconData: FontAwesomeIcons.telegram.data,
       url: StringConst.TELEGRAM_URL,
     ),
   ];

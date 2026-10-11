@@ -9,11 +9,11 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 class NextProject extends StatefulWidget {
   const NextProject({
-    Key? key,
+    super.key,
     required this.width,
     required this.nextProject,
     this.navigateToNextProject,
-  }) : super(key: key);
+  });
 
   final ProjectItemData nextProject;
   final double width;

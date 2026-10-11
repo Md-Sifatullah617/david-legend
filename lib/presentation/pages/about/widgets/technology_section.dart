@@ -9,10 +9,10 @@ const double spacing = 20;
 
 class TechnologySection extends StatelessWidget {
   const TechnologySection({
-    Key? key,
+    super.key,
     required this.controller,
     required this.width,
-  }) : super(key: key);
+  });
 
   final AnimationController controller;
 

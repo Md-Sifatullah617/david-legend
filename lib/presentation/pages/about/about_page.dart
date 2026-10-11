@@ -19,7 +19,7 @@ import '../../widgets/content_builder.dart';
 
 class AboutPage extends StatefulWidget {
   static const String aboutPageRoute = StringConst.ABOUT_PAGE;
-  const AboutPage({Key? key}) : super(key: key);
+  const AboutPage({super.key});
 
   @override
   _AboutPageState createState() => _AboutPageState();
@@ -120,11 +120,11 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
         Sizes.TEXT_SIZE_20,
       ),
     );
-    CurvedAnimation _storySectionAnimation = CurvedAnimation(
+    CurvedAnimation storySectionAnimation = CurvedAnimation(
       parent: _storyController,
       curve: Interval(0.6, 1.0, curve: Curves.ease),
     );
-    CurvedAnimation _technologySectionAnimation = CurvedAnimation(
+    CurvedAnimation technologySectionAnimation = CurvedAnimation(
       parent: _technologyController,
       curve: Interval(0.6, 1.0, curve: Curves.fastOutSlowIn),
     );
@@ -176,7 +176,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                       body: Column(
                         children: [
                           AnimatedPositionedText(
-                            controller: _storySectionAnimation,
+                            controller: storySectionAnimation,
                             width: widthOfBody,
                             maxLines: 30,
                             // factor: 1.25,
@@ -184,14 +184,14 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                             textStyle: bodyText1Style,
                           ),
                           AnimatedPositionedText(
-                            controller: _storySectionAnimation,
+                            controller: storySectionAnimation,
                             width: widthOfBody,
                             maxLines: 30,
                             text: StringConst.ABOUT_DEV_STORY_CONTENT_2,
                             textStyle: bodyText1Style,
                           ),
                            AnimatedPositionedText(
-                            controller: _storySectionAnimation,
+                            controller: storySectionAnimation,
                             width: widthOfBody,
                             maxLines: 30,
                             text: StringConst.ABOUT_DEV_STORY_CONTENT_3,
@@ -220,7 +220,7 @@ class _AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                       body: Column(
                         children: [
                           AnimatedPositionedText(
-                            controller: _technologySectionAnimation,
+                            controller: technologySectionAnimation,
                             width: widthOfBody,
                             maxLines: 12,
                             text: StringConst.ABOUT_DEV_TECHNOLOGY_CONTENT,

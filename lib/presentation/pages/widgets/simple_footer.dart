@@ -10,11 +10,11 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 class SimpleFooter extends StatelessWidget {
   const SimpleFooter({
-    Key? key,
+    super.key,
     this.height,
     this.width,
     this.backgroundColor = AppColors.black,
-  }) : super(key: key);
+  });
 
   final double? width;
   final double? height;
@@ -54,7 +54,7 @@ class SimpleFooter extends StatelessWidget {
 }
 
 class SimpleFooterSm extends StatelessWidget {
-  const SimpleFooterSm({Key? key}) : super(key: key);
+  const SimpleFooterSm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -105,7 +105,7 @@ class SimpleFooterSm extends StatelessWidget {
 }
 
 class SimpleFooterLg extends StatelessWidget {
-  const SimpleFooterLg({Key? key}) : super(key: key);
+  const SimpleFooterLg({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -156,7 +156,7 @@ class SimpleFooterLg extends StatelessWidget {
 }
 
 class BuiltWithFlutter extends StatelessWidget {
-  const BuiltWithFlutter({Key? key}) : super(key: key);
+  const BuiltWithFlutter({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -180,7 +180,7 @@ class BuiltWithFlutter extends StatelessWidget {
           style: style,
         ),
         Icon(
-          FontAwesomeIcons.solidHeart,
+          FontAwesomeIcons.solidHeart.data,
           size: 14,
           color: AppColors.errorRed,
         )

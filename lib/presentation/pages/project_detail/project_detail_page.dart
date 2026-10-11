@@ -33,7 +33,7 @@ class ProjectDetailArguments {
 
 class ProjectDetailPage extends StatefulWidget {
   static const String projectDetailPageRoute = StringConst.PROJECT_DETAIL_PAGE;
-  const ProjectDetailPage({Key? key}) : super(key: key);
+  const ProjectDetailPage({super.key});
 
   @override
   _ProjectDetailPageState createState() => _ProjectDetailPageState();

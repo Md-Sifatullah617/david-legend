@@ -14,7 +14,7 @@ import 'package:visibility_detector/visibility_detector.dart';
 
 class ExperiencePage extends StatefulWidget {
   static const String experiencePageRoute = StringConst.EXPERIENCE_PAGE;
-  const ExperiencePage({Key? key}) : super(key: key);
+  const ExperiencePage({super.key});
 
   @override
   _ExperiencePageState createState() => _ExperiencePageState();

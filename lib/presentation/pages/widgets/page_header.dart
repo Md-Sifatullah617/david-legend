@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 
 class PageHeader extends StatefulWidget {
   const PageHeader({
-    Key? key,
+    super.key,
     required this.headingText,
     required this.headingTextController,
-  }) : super(key: key);
+  });
 
   final String headingText;
   final AnimationController headingTextController;

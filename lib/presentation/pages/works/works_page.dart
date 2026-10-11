@@ -12,7 +12,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 class WorksPage extends StatefulWidget {
   static const String worksPageRoute = StringConst.WORKS_PAGE;
-  const WorksPage({Key? key}) : super(key: key);
+  const WorksPage({super.key});
 
   @override
   _WorksPageState createState() => _WorksPageState();
@@ -137,7 +137,7 @@ class _WorksPageState extends State<WorksPage> with TickerProviderStateMixin {
             imageUrl: data[index].image,
             projectItemheight: projectHeight.toDouble(),
             subheight: subHeight.toDouble(),
-            backgroundColor: AppColors.accentColor2.withOpacity(0.35),
+            backgroundColor: AppColors.accentColor2.withValues(alpha: 0.35),
             title: data[index].title.toLowerCase(),
             subtitle: data[index].category,
             containerColor: data[index].primaryColor,

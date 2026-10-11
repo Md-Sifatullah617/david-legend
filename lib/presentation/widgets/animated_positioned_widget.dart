@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class AnimatedPositionedWidget extends StatefulWidget {
   const AnimatedPositionedWidget({
-    Key? key,
+    super.key,
     required this.controller,
     required this.width,
     required this.height,
     required this.child,
     this.relativeRect,
     this.slideAnimationcurve = Curves.fastOutSlowIn,
-  }) : super(key: key);
+  });
 
   final CurvedAnimation controller;
   final double width;

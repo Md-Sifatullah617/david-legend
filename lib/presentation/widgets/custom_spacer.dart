@@ -2,7 +2,7 @@ import 'package:aerium/core/layout/adaptive.dart';
 import 'package:flutter/material.dart';
 
 class CustomSpacer extends StatelessWidget {
-  const CustomSpacer({ Key? key, this.widthFactor, this.heightFactor, }) : super(key: key);
+  const CustomSpacer({ super.key, this.widthFactor, this.heightFactor, });
 
   final double? widthFactor;
   final double? heightFactor;

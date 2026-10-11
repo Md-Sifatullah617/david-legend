@@ -18,16 +18,15 @@ class SocialData {
 }
 
 class Socials extends StatelessWidget {
-  Socials({
-    Key? key,
+  const Socials({
+    super.key,
     required this.socialData,
     this.size = Sizes.ICON_SIZE_18,
     this.color = AppColors.white,
     this.spacing = Sizes.SIZE_40,
     this.runSpacing = Sizes.SIZE_16,
     this.isHorizontal = true,
-  })  : assert(socialData.length > 0),
-        super(key: key);
+  })  : assert(socialData.length > 0);
 
   final List<SocialData> socialData;
   final double size;

@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 class PrivacyPolicyPage extends StatefulWidget {
   static const String pageRoute = StringConst.PRIVACY_POLICY_PAGE;
 
-  const PrivacyPolicyPage({Key? key}) : super(key: key);
+  const PrivacyPolicyPage({super.key});
 
   @override
   State<PrivacyPolicyPage> createState() => _PrivacyPolicyPageState();

@@ -8,12 +8,12 @@ import 'package:aerium/presentation/widgets/nav_item.dart';
 import 'package:aerium/presentation/widgets/spaces.dart';
 import 'package:aerium/values/values.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:feather_icon_font/feather_icon_font.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class NavBar extends StatelessWidget {
-  NavBar({
-    Key? key,
+  const NavBar({
+    super.key,
     required this.selectedRouteTitle,
     required this.selectedRouteName,
     required this.controller,
@@ -24,7 +24,7 @@ class NavBar extends StatelessWidget {
     this.selectedTitleColor = AppColors.black,
     this.titleColor = AppColors.grey600,
     this.appLogoColor = AppColors.black,
-  }) : super(key: key);
+  });
 
   final String selectedRouteTitle;
   final String selectedRouteName;

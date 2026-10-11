@@ -3,7 +3,7 @@ import 'package:aerium/values/values.dart';
 import 'package:flutter/material.dart';
 
 class ScrollDownButton extends StatelessWidget {
-  const ScrollDownButton({Key? key}) : super(key: key);
+  const ScrollDownButton({super.key});
 
   @override
   Widget build(BuildContext context) {

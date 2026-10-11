@@ -56,7 +56,7 @@ class ProjectItemData {
 
 class ProjectData extends StatelessWidget {
   const ProjectData({
-    Key? key,
+    super.key,
     required this.projectNumber,
     required this.title,
     required this.subtitle,
@@ -70,7 +70,7 @@ class ProjectData extends StatelessWidget {
     this.indicatorWidth = Sizes.WIDTH_150,
     this.indicatorMargin,
     this.leadingMargin,
-  }) : super(key: key);
+  });
 
   final String projectNumber;
   final String title;
@@ -143,7 +143,7 @@ const double heightOfButtonSm = startWidthOfButtonSm;
 
 class ProjectItemLg extends StatefulWidget {
   const ProjectItemLg({
-    Key? key,
+    super.key,
     required this.projectNumber,
     required this.title,
     required this.subtitle,
@@ -162,7 +162,7 @@ class ProjectItemLg extends StatefulWidget {
     this.duration = const Duration(milliseconds: 300),
     this.padding,
     this.onTap,
-  }) : super(key: key);
+  });
 
   /// signifies the position of the project in the list
   final String projectNumber;
@@ -287,7 +287,7 @@ class _ProjectItemLgState extends State<ProjectItemLg>
       md: projectItemWidth / 3,
       sm: projectItemWidth / 2.8,
     );
-    Animation<double> _animation = Tween<double>(
+    Animation<double> animation = Tween<double>(
       begin: responsiveSize(
         context,
         -imageWidth * 2.2,
@@ -407,7 +407,7 @@ class _ProjectItemLgState extends State<ProjectItemLg>
             Positioned(
               right: 0,
               child: Transform(
-                origin: Offset(_animation.value, 0),
+                origin: Offset(animation.value, 0),
                 transform: Matrix4.identity()
                   ..setEntry(3, 2, 0.0095)
                   ..rotateY(0.075),
@@ -448,7 +448,7 @@ class _ProjectItemLgState extends State<ProjectItemLg>
 
 class ProjectItemSm extends StatefulWidget {
   const ProjectItemSm({
-    Key? key,
+    super.key,
     required this.projectNumber,
     required this.title,
     required this.subtitle,
@@ -464,7 +464,7 @@ class ProjectItemSm extends StatefulWidget {
     this.imageHeight,
     this.duration = const Duration(milliseconds: 350),
     this.onTap,
-  }) : super(key: key);
+  });
 
   final String projectNumber;
   final String title;

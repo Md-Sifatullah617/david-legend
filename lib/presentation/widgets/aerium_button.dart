@@ -6,7 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AeriumButton extends StatefulWidget {
   AeriumButton({
-    Key? key,
+    super.key,
     required this.title,
     this.titleStyle,
     this.width = Sizes.WIDTH_120,
@@ -18,13 +18,13 @@ class AeriumButton extends StatefulWidget {
     this.buttonColor = AppColors.black,
     this.borderColor = AppColors.black,
     this.onHoverColor = AppColors.white,
-    this.iconData = FontAwesomeIcons.telegramPlane,
+    IconData? iconData,
     this.iconSize = Sizes.ICON_SIZE_14,
     this.duration = const Duration(milliseconds: 200),
     this.curve = Curves.fastOutSlowIn,
     this.buttonStyle,
     this.isLoading = false,
-  }) : super(key: key);
+  })  : iconData = iconData ?? FontAwesomeIcons.telegram.data;
 
   final String title;
   final TextStyle? titleStyle;
@@ -96,8 +96,8 @@ class _AeriumButtonState extends State<AeriumButton>
       fontWeight: FontWeight.w400,
     );
     final ButtonStyle defaultButtonStyle = ElevatedButton.styleFrom(
-      primary: widget.onHoverColor,
-      onPrimary: widget.onHoverColor,
+      backgroundColor: widget.onHoverColor,
+      foregroundColor: widget.onHoverColor,
       padding: EdgeInsets.all(0),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(0)),

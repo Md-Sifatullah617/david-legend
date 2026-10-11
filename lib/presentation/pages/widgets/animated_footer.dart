@@ -13,11 +13,11 @@ import '../contact_page.dart';
 
 class AnimatedFooter extends StatefulWidget {
   const AnimatedFooter({
-    Key? key,
+    super.key,
     this.height,
     this.width,
     this.backgroundColor = AppColors.black,
-  }) : super(key: key);
+  });
 
   final double? width;
   final double? height;

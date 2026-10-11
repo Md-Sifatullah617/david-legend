@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class AnimatedLineThroughText extends StatefulWidget {
   const AnimatedLineThroughText({
-    Key? key,
+    super.key,
     required this.text,
     required this.textStyle,
     this.controller,
@@ -28,8 +28,7 @@ class AnimatedLineThroughText extends StatefulWidget {
     this.hasSlideBoxAnimation = false,
   })  : assert(hasSlideBoxAnimation == true
             ? controller != null
-            : controller == null),
-        super(key: key);
+            : controller == null);
 
   final String text;
   final Duration duration;

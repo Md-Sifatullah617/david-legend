@@ -8,7 +8,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 class ContentBuilder extends StatelessWidget {
   const ContentBuilder({
-    Key? key,
+    super.key,
     required this.width,
     required this.number,
     required this.section,
@@ -20,7 +20,7 @@ class ContentBuilder extends StatelessWidget {
     this.titleStyle,
     this.heading,
     this.footer,
-  }) : super(key: key);
+  });
 
   final double width;
   final AnimationController controller;

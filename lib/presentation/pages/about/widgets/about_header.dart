@@ -8,10 +8,10 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 class AboutHeader extends StatelessWidget {
   const AboutHeader({
-    Key? key,
+    super.key,
     required this.width,
     required this.controller,
-  }) : super(key: key);
+  });
 
   final double width;
   final AnimationController controller;
@@ -89,10 +89,10 @@ class AboutHeader extends StatelessWidget {
 
 class AboutDescription extends StatelessWidget {
   const AboutDescription({
-    Key? key,
+    super.key,
     required this.controller,
     required this.width,
-  }) : super(key: key);
+  });
 
   final AnimationController controller;
   final double width;

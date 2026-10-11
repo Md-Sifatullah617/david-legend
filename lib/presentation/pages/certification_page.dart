@@ -12,7 +12,7 @@ import 'package:visibility_detector/visibility_detector.dart';
 
 class CertificationPage extends StatefulWidget {
   static const String certificationPageRoute = StringConst.CERTIFICATION_PAGE;
-  const CertificationPage({Key? key}) : super(key: key);
+  const CertificationPage({super.key});
 
   @override
   _CertificationPageState createState() => _CertificationPageState();

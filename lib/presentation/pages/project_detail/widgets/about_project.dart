@@ -20,12 +20,12 @@ List<String> titles = [
 
 class Aboutproject extends StatefulWidget {
   const Aboutproject({
-    Key? key,
+    super.key,
     required this.controller,
     required this.projectDataController,
     required this.projectData,
     required this.width,
-  }) : super(key: key);
+  });
 
   final AnimationController controller;
   final AnimationController projectDataController;
@@ -237,14 +237,14 @@ class _AboutprojectState extends State<Aboutproject> {
 
 class ProjectData extends StatelessWidget {
   const ProjectData({
-    Key? key,
+    super.key,
     required this.title,
     required this.subtitle,
     required this.controller,
     this.width = double.infinity,
     this.titleStyle,
     this.subtitleStyle,
-  }) : super(key: key);
+  });
 
   final String title;
   final String subtitle;

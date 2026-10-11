@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class AnimatedTextSlideBoxTransition extends StatefulWidget {
   const AnimatedTextSlideBoxTransition({
-    Key? key,
+    super.key,
     required this.controller,
     required this.text,
     required this.textStyle,
@@ -22,7 +22,7 @@ class AnimatedTextSlideBoxTransition extends StatefulWidget {
     this.visibleAnimationcurve = Curves.fastOutSlowIn,
     this.invisibleAnimationcurve = Curves.fastOutSlowIn,
     this.slideAnimationcurve = Curves.fastOutSlowIn,
-  }) : super(key: key);
+  });
 
   final AnimationController controller;
   final double heightFactor;

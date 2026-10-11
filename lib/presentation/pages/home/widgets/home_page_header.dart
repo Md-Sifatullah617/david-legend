@@ -18,10 +18,10 @@ const kDuration = Duration(milliseconds: 600);
 
 class HomePageHeader extends StatefulWidget {
   const HomePageHeader({
-    Key? key,
+    super.key,
     required this.scrollToWorksKey,
     required this.controller,
-  }) : super(key: key);
+  });
 
   final GlobalKey scrollToWorksKey;
   final AnimationController controller;
@@ -128,7 +128,7 @@ class _HomePageHeaderState extends State<HomePageHeader>
 
     return Container(
       width: screenWidth,
-      color: AppColors.accentColor2.withOpacity(0.35),
+      color: AppColors.accentColor2.withValues(alpha: 0.35),
       child: Stack(
         children: [
           Container(
@@ -262,7 +262,7 @@ class _HomePageHeaderState extends State<HomePageHeader>
 }
 
 class WhiteCircle extends StatelessWidget {
-  const WhiteCircle({Key? key}) : super(key: key);
+  const WhiteCircle({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -286,10 +286,10 @@ class WhiteCircle extends StatelessWidget {
 
 class AboutDev extends StatefulWidget {
   const AboutDev({
-    Key? key,
+    super.key,
     required this.controller,
     required this.width,
-  }) : super(key: key);
+  });
 
   final AnimationController controller;
   final double width;

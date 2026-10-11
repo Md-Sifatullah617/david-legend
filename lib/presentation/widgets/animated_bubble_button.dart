@@ -3,8 +3,8 @@ import 'package:aerium/values/values.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedBubbleButton extends StatefulWidget {
-  AnimatedBubbleButton({
-    Key? key,
+  const AnimatedBubbleButton({
+    super.key,
     this.child,
     this.title = '',
     this.titleStyle,
@@ -24,7 +24,7 @@ class AnimatedBubbleButton extends StatefulWidget {
     this.targetOffset = const Offset(0.1, 0),
     this.controller,
     this.controlsOwnAnimation = true,
-  }) : super(key: key);
+  });
 
   final String title;
   final TextStyle? titleStyle;
@@ -42,9 +42,9 @@ class AnimatedBubbleButton extends StatefulWidget {
   final Offset targetOffset;
   final GestureTapCallback? onTap;
   final BorderRadiusGeometry? endBorderRadius;
-  bool? hovering;
+  final bool? hovering;
   // prevents button from animating on mouse enter and exit
-  bool controlsOwnAnimation;
+  final bool controlsOwnAnimation;
   final AnimationController? controller;
 
   @override

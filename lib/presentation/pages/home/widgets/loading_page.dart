@@ -6,18 +6,18 @@ import 'package:aerium/values/values.dart';
 import 'package:flutter/material.dart';
 
 const double lineHeight = 2;
-Color defaultLineColor = AppColors.accentColor2.withOpacity(0.35);
+Color defaultLineColor = AppColors.accentColor2.withValues(alpha: 0.35);
 
 class LoadingHomePageAnimation extends StatefulWidget {
   static const String loadingPageRoute = StringConst.LOADING_PAGE;
 
-  LoadingHomePageAnimation({
-    Key? key,
+  const LoadingHomePageAnimation({
+    super.key,
     required this.text,
     required this.style,
     required this.onLoadingDone,
     this.lineColor,
-  }) : super(key: key);
+  });
   final String text;
   final TextStyle? style;
   final VoidCallback onLoadingDone;
@@ -194,8 +194,8 @@ class _LoadingHomePageAnimationState extends State<LoadingHomePageAnimation>
                                   alignment: Alignment.center,
                                   child: AnimatedOpacity(
                                     opacity: opacityAnimation.value,
-                                    child: child,
                                     duration: _scaleDuration,
+                                    child: child,
                                   ),
                                 ),
                               ),

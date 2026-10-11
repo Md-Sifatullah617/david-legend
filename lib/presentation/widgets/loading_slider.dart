@@ -2,15 +2,15 @@ import 'package:aerium/values/values.dart';
 import 'package:flutter/material.dart';
 
 class LoadingSlider extends AnimatedWidget {
-  LoadingSlider({
-    Key? key,
+  const LoadingSlider({
+    super.key,
     required this.width,
     required this.height,
     required this.controller,
     this.curve = Curves.fastLinearToSlowEaseIn,
     this.isSlideForward = true,
     this.color = AppColors.black,
-  }) : super(key: key, listenable: controller);
+  }) : super(listenable: controller);
 
   final AnimationController controller;
   final Curve curve;

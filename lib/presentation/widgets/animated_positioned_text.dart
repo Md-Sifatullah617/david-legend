@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AnimatedPositionedText extends StatefulWidget {
   const AnimatedPositionedText({
-    Key? key,
+    super.key,
     required this.controller,
     required this.text,
     required this.textStyle,
@@ -12,7 +12,7 @@ class AnimatedPositionedText extends StatefulWidget {
     this.textAlign,
     this.relativeRect,
     this.slideAnimationcurve = Curves.fastOutSlowIn,
-  }) : super(key: key);
+  });
 
   final CurvedAnimation controller;
   final String text;

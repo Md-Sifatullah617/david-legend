@@ -19,9 +19,9 @@ import 'package:visibility_detector/visibility_detector.dart';
 class HomePage extends StatefulWidget {
   static const String homePageRoute = StringConst.HOME_PAGE;
 
-  HomePage({
-    Key? key,
-  }) : super(key: key);
+  const HomePage({
+    super.key,
+  });
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -29,7 +29,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   GlobalKey key = GlobalKey();
-  ScrollController _scrollController = ScrollController();
+  final ScrollController _scrollController = ScrollController();
   late AnimationController _viewProjectsController;
   late AnimationController _recentWorksController;
   late AnimationController _slideTextController;
@@ -269,7 +269,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             imageUrl: data[index].image,
             projectItemheight: projectHeight.toDouble(),
             subheight: subHeight.toDouble(),
-            backgroundColor: AppColors.accentColor2.withOpacity(0.35),
+            backgroundColor: AppColors.accentColor2.withValues(alpha: 0.35),
             title: data[index].title.toLowerCase(),
             subtitle: data[index].category,
             containerColor: data[index].primaryColor,

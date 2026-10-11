@@ -5,7 +5,7 @@ const double hiddenFactor = 2.0;
 
 class AnimatedSlideBox extends AnimatedWidget {
   const AnimatedSlideBox({
-    Key? key,
+    super.key,
     required this.controller,
     required this.height,
     required this.width,
@@ -15,7 +15,7 @@ class AnimatedSlideBox extends AnimatedWidget {
     this.coverColor = AppColors.primaryColor,
     this.visibleBoxCurve = Curves.fastOutSlowIn,
     this.invisibleBoxCurve = Curves.fastOutSlowIn,
-  }) : super(key: key, listenable: controller);
+  }) : super(listenable: controller);
 
   final AnimationController controller;
   final double height;

@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:aerium/values/values.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,26 +5,27 @@ import 'package:google_fonts/google_fonts.dart';
 class AppTheme {
   static const _lightFillColor = Colors.black;
 
-  static final Color _lightFocusColor = Colors.black.withOpacity(0.12);
+  static final Color _lightFocusColor = Colors.black.withValues(alpha: 0.12);
 
   static ThemeData lightThemeData =
       themeData(lightColorScheme, _lightFocusColor);
 
   static ThemeData themeData(ColorScheme colorScheme, Color focusColor) {
     return ThemeData(
+      useMaterial3: false,
       colorScheme: colorScheme,
       textTheme: _textTheme,
       iconTheme: IconThemeData(color: AppColors.white),
-      canvasColor: colorScheme.background,
+      canvasColor: colorScheme.surface,
       appBarTheme: AppBarTheme(
-        color: AppColors.primaryColor,
+        backgroundColor: AppColors.primaryColor,
       ),
       textSelectionTheme: TextSelectionThemeData(
         cursorColor: AppColors.black,
         selectionColor: AppColors.textSelectionColor,
         selectionHandleColor: AppColors.primaryColor,
       ),
-      scaffoldBackgroundColor: colorScheme.background,
+      scaffoldBackgroundColor: colorScheme.surface,
       highlightColor: Colors.transparent,
 
       // accentColor: colorScheme.primary,
@@ -42,9 +41,7 @@ class AppTheme {
     secondary: AppColors.secondaryColor,
     secondaryContainer: AppColors.black,
     // secondaryVariant: AppColors.black,
-    background: AppColors.primaryColor,
     surface: AppColors.primaryColor,
-    onBackground: Colors.white,
     error: _lightFillColor,
     onError: _lightFillColor,
     onPrimary: _lightFillColor,
@@ -60,79 +57,79 @@ class AppTheme {
   static const _light = FontWeight.w300;
 
   static final TextTheme _textTheme = TextTheme(
-    headline1: TextStyle(
+    displayLarge: TextStyle(
       fontFamily: StringConst.VISUELT_PRO,
       fontSize: Sizes.TEXT_SIZE_96,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline2: TextStyle(
+    displayMedium: TextStyle(
       fontFamily: StringConst.VISUELT_PRO,
       fontSize: Sizes.TEXT_SIZE_60,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline3: GoogleFonts.roboto(
+    displaySmall: GoogleFonts.roboto(
       fontSize: Sizes.TEXT_SIZE_48,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline4: TextStyle(
+    headlineMedium: TextStyle(
       fontFamily: StringConst.VISUELT_PRO,
       fontSize: Sizes.TEXT_SIZE_34,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline5: GoogleFonts.roboto(
+    headlineSmall: GoogleFonts.roboto(
       fontSize: Sizes.TEXT_SIZE_24,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline6: TextStyle(
+    titleLarge: TextStyle(
       fontFamily: StringConst.VISUELT_PRO,
       fontSize: Sizes.TEXT_SIZE_20,
       color: AppColors.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    subtitle1: TextStyle(
+    titleMedium: TextStyle(
       fontFamily: StringConst.VISUELT_PRO,
       fontSize: Sizes.TEXT_SIZE_16,
       color: AppColors.secondaryColor,
       fontWeight: _semiBold,
       fontStyle: FontStyle.normal,
     ),
-    subtitle2: GoogleFonts.roboto(
+    titleSmall: GoogleFonts.roboto(
       fontSize: Sizes.TEXT_SIZE_14,
       color: AppColors.secondaryColor,
       fontWeight: _semiBold,
       fontStyle: FontStyle.normal,
     ),
-    bodyText1: TextStyle(
+    bodyLarge: TextStyle(
       fontFamily: StringConst.VISUELT_PRO,
       fontSize: Sizes.TEXT_SIZE_16,
       color: AppColors.secondaryColor,
       fontWeight: _light,
       fontStyle: FontStyle.normal,
     ),
-    bodyText2: GoogleFonts.roboto(
+    bodyMedium: GoogleFonts.roboto(
       fontSize: Sizes.TEXT_SIZE_14,
       color: AppColors.secondaryColor,
       fontWeight: _light,
       fontStyle: FontStyle.normal,
     ),
-    button: GoogleFonts.roboto(
+    labelLarge: GoogleFonts.roboto(
       fontSize: Sizes.TEXT_SIZE_14,
       color: AppColors.secondaryColor,
       fontStyle: FontStyle.normal,
       fontWeight: _medium,
     ),
-    caption: TextStyle(
+    bodySmall: TextStyle(
       fontFamily: StringConst.VISUELT_PRO,
       fontSize: Sizes.TEXT_SIZE_12,
       color: AppColors.white,

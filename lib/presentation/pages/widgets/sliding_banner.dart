@@ -4,7 +4,7 @@ import 'package:aerium/values/values.dart';
 import 'package:flutter/material.dart';
 
 class SlidingBanner extends StatefulWidget {
-  const SlidingBanner({Key? key}) : super(key: key);
+  const SlidingBanner({super.key});
 
   @override
   _SlidingBannerState createState() => _SlidingBannerState();

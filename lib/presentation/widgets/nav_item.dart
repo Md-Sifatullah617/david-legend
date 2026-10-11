@@ -17,7 +17,7 @@ class NavItemData {
 }
 
 class NavItem extends StatefulWidget {
-  NavItem({
+  const NavItem({
     required this.title,
     required this.route,
     required this.index,
@@ -48,7 +48,6 @@ class NavItem extends StatefulWidget {
 }
 
 class _NavItemState extends State<NavItem> {
-  bool _hovering = false;
   bool _hoveringUnselectedNavItemMobile = false;
 
   @override
@@ -64,11 +63,7 @@ class _NavItemState extends State<NavItem> {
     );
   }
 
-  void _mouseEnter(bool hovering) {
-    setState(() {
-      _hovering = hovering;
-    });
-  }
+  void _mouseEnter(bool hovering) {}
 
   void _onMouseEnterUnselectedNavItemMobile(bool hovering) {
     setState(() {

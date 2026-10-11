@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'aerium_button.dart';
 
 class CertificationCard extends StatefulWidget {
-  CertificationCard({
+  const CertificationCard({
     required this.imageUrl,
     required this.title,
     required this.subtitle,
@@ -127,7 +127,7 @@ class _CertificationCardState extends State<CertificationCard>
                   ? Container(
                     width: widget.width,
                     height: widget.height,
-                    color: widget.hoverColor.withOpacity(0.15),
+                    color: widget.hoverColor.withValues(alpha: 0.15),
                     child: Column(
                       children: [
                         Spacer(flex: 3),

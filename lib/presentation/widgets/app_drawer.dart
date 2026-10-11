@@ -7,10 +7,10 @@ import 'package:aerium/presentation/widgets/page_wrapper.dart';
 import 'package:aerium/presentation/widgets/spaces.dart';
 import 'package:aerium/values/values.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:feather_icon_font/feather_icon_font.dart';
 
 class AppDrawer extends StatefulWidget {
-  AppDrawer({
+  const AppDrawer({
     required this.menuList,
     required this.selectedItemRouteName,
     required this.controller,
